@@ -9,6 +9,7 @@ import org.codehaus.jackson.map.deser.impl.CreatorProperty;
 import org.codehaus.jackson.map.deser.std.StdKeyDeserializers;
 import org.codehaus.jackson.map.deser.std.ThrowableDeserializer;
 import org.codehaus.jackson.map.introspect.*;
+import org.codehaus.jackson.map.jsontype.SubTypeValidator;
 import org.codehaus.jackson.map.type.*;
 import org.codehaus.jackson.map.util.ArrayBuilders;
 import org.codehaus.jackson.map.util.ClassUtil;
@@ -632,6 +633,8 @@ public class BeanDeserializerFactory
         if (!isPotentialBeanType(type.getRawClass())) {
             return null;
         }
+        // For checks like [databind#1599]
+        _validateSubType(type, beanDesc);
         // Use generic bean introspection to build deserializer
         return buildBeanDeserializer(config, type, beanDesc, property);
     }
@@ -1472,5 +1475,12 @@ public class BeanDeserializerFactory
             }
         }
         return status;
+    }
+
+    protected void _validateSubType(JavaType type,
+            BeanDescription beanDesc)
+        throws JsonMappingException
+    {
+        SubTypeValidator.instance().validateSubType(type, beanDesc);
     }
 }
