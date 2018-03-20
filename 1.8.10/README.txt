@@ -1,3 +1,42 @@
+# Cloudera Modifications
+
+This release, initially created in mid-March 2018, contains a backport
+of all the commits related to CVE-2017-7525 and future related
+CVEs. This has been done because lots of code in CDH 5 refers to this
+old version of jackson, and we can't upgrade without risking backwards
+compatibility issues. Hence we are backporting this point fix.
+
+In essence, it's a backport of the following git hashes:
+
+6ce32ffd18facac6abdbbf559c817b47fcb622c1
+60d459cedcf079c6106ae7da2ac562bc32dcabe1
+fd8dec2c7fab8b4b4bd60502a0f1d63ec23c24da
+f4e8de59a4739273d5692d029f15986bb57dd273
+3bfbb835e530055c1941ddf87fde0b08d08dcd38
+e8f043d1aac9b82eee907e0f0c3abbdea723a935
+ddfddfba6414adbecaff99684ef66eebd3a92e92
+02ce588d77761bb03beca5748f3b2c918f205b2a
+f031f27a31625d07922bdd090664c69544200a5d
+e865a7a4464da63ded9f4b1a2328ad85c9ded78b
+2235894210c75f624a3d0cd60bfb0434a20a18bf
+978798382ceb72229e5036aa1442943933d6d171
+bb45fb16709018842f858f1a6e1118676aaa34bd
+755e3bc0cbea30de0102f6a88519a0c34d571bbd
+038b471e2efde2e8f96b4e0be958d3e5a1ff1d05
+c803a2658e45b8d1095d2504f943bd4ebaab18e9
+6799f8f10cc78e9af6d443ed6982d00a13f2e7d2
+e66c0a9d3c926ff1b63bf586c824ead1d02f2a3d
+
+However, all those backports proved a little tricky, and so instead
+it's mostly a straight copy of the code related to those hashes shoved
+back into this release. This wasn't all that hard because there is
+only one entry point to this funtionality: _validateSubType() in
+BeanDeserializerFactory.java.
+
+This was originally performed on the 2.1.0 release, and that backport
+is being made to this even older, more difficult to backport to
+release.
+
 == Jackson Json-processor ==
 
 This is the Jackson Json-processor package. Project home page can be found

@@ -7,6 +7,7 @@ import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.annotate.JsonAutoDetect.Visibility;
 import org.codehaus.jackson.map.*;
 import org.codehaus.jackson.map.introspect.*;
+import org.codehaus.jackson.map.jsontype.SubTypeValidator;
 import org.codehaus.jackson.map.type.*;
 import org.codehaus.jackson.map.util.ArrayBuilders;
 import org.codehaus.jackson.map.util.ClassUtil;
@@ -466,6 +467,8 @@ public class BeanDeserializerFactory
         if (!isPotentialBeanType(type.getRawClass())) {
             return null;
         }
+        // For checks like [databind#1599]
+        _validateSubType(type, beanDesc);
         /* Otherwise we'll just use generic bean introspection
          * to build deserializer
          */
@@ -1239,5 +1242,12 @@ public class BeanDeserializerFactory
             }
         }
         return status;
+    }
+
+    protected void _validateSubType(JavaType type,
+            BeanDescription beanDesc)
+        throws JsonMappingException
+    {
+        SubTypeValidator.instance().validateSubType(type, beanDesc);
     }
 }
