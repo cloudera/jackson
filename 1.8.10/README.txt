@@ -2,9 +2,7 @@
 
 This release, initially created in mid-March 2018, contains a backport
 of all the commits related to CVE-2017-7525 and future related
-CVEs. This has been done because lots of code in CDH 5 refers to this
-old version of jackson, and we can't upgrade without risking backwards
-compatibility issues. Hence we are backporting this point fix.
+CVEs.
 
 In essence, it's a backport of the following git hashes:
 
