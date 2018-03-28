@@ -1,8 +1,7 @@
 # Cloudera Modifications
 
-This release, initially created in mid-March 2018, contains a backport
-of all the commits related to CVE-2017-7525 and future related
-CVEs.
+This release contains a backport of all the commits related to
+CVE-2017-7525 and future related CVEs.
 
 In essence, it's a backport of the following git hashes:
 
@@ -25,15 +24,12 @@ c803a2658e45b8d1095d2504f943bd4ebaab18e9
 6799f8f10cc78e9af6d443ed6982d00a13f2e7d2
 e66c0a9d3c926ff1b63bf586c824ead1d02f2a3d
 
-However, all those backports proved a little tricky, and so instead
-it's mostly a straight copy of the code related to those hashes shoved
-back into this release. This wasn't all that hard because there is
-only one entry point to this funtionality: _validateSubType() in
-BeanDeserializerFactory.java.
+All of the backports are mostly a straight copy of the code related to
+those hashes referenced. There is only one entry point to this
+funtionality: _validateSubType() in BeanDeserializerFactory.java.
 
-This was originally performed on the 2.1.0 release, and that backport
-is being made to this even older, more difficult to backport to
-release.
+This backport was originally performed on the 2.1.0 release and that
+has in turn been backported to this older release.
 
 == Jackson Json-processor ==
 
