@@ -31,6 +31,16 @@ funtionality: _validateSubType() in BeanDeserializerFactory.java.
 This backport was originally performed on the 2.1.0 release and that
 has in turn been backported to this older release.
 
+The '-cloudera.2' release includes
+27b4defc270454dea6842bd9279f17387eceb737
+7487cf7eb14be2f65a1eb108e8629c07ef45e0a1
+87d29af25e82a249ea15858e2d4ecbf64091db44
+72cd4025a229fb28ec133235003dd4616f70afaa
+
+These commits address CVE-2018-19360, CVE-2018-19361, CVE-2018-19362,
+CVE-2018-14718, CVE-2018-14719, CVE-2018-14720, and CVE-2018-14721
+
+
 
 == Jackson Json-processor ==
 
