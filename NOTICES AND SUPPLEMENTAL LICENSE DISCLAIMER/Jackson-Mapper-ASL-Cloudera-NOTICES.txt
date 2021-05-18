@@ -2,11 +2,10 @@
 ##################################################################################################
 BEGIN CLOUDERA NOTICES AND CLOUDERA'S SUPPLEMENTAL DISCLAIMER TO APACHE LICENSE VERSION 2.0 FOR:
 
-jackson-mapper-asl-1.8.10-cloudera.1.jar
-jackson-mapper-asl-1.9.13-cloudera.1.jar
+jackson-mapper-asl-1.9.13-cloudera.3.jar
 
-This release contains a backport of all the commits related to CVE-2017-7525 and future related 
-CVEs. 
+This release contains a backport of all the commits related to
+jackson-databind CVEs.
 
 In essence, it's a backport of the following git hashes:
 
@@ -28,12 +27,59 @@ bb45fb16709018842f858f1a6e1118676aaa34bd
 c803a2658e45b8d1095d2504f943bd4ebaab18e9 
 6799f8f10cc78e9af6d443ed6982d00a13f2e7d2 
 e66c0a9d3c926ff1b63bf586c824ead1d02f2a3d
+27b4defc270454dea6842bd9279f17387eceb737
+7487cf7eb14be2f65a1eb108e8629c07ef45e0a1
+87d29af25e82a249ea15858e2d4ecbf64091db44
+72cd4025a229fb28ec133235003dd4616f70afaa
+dda513bd7251b4f32b7b60b1c13740e3b5a43024
+c9ef4a10d6f6633cf470d6a469514b68fa2be234
+5f7c69bba07a7155adde130d9dee2e54a54f1fa5
+ad418eeb974e357f2797aef64aa0e3ffaaa6125b
+d4983c740fec7d5576b207a8c30a63d3ea7443de
+73c1c2cc76e6cdd7f3a5615cbe3207fe96e4d3db
+191a4cdf87b56d2ddddb77edd895ee756b7f75eb
+41b7f9b90149e9d44a65a8261a8deedc7186f6af
+998efd708284778f29d83d7962a9bd935c228317
+9593e16cf5a3d289a9c584f7123639655de9ddac
+b5a304a98590b6bb766134f9261e6566dcbbb6d0
+fc4214a883dc087070f25da738ef0d49c2f3387e
+914e7c9f2cb8ce66724bf26a72adc7e958992497
+9f4e97019fb0dd836533d0b6198c88787e235ae2
+4d038c9de0aa80a5dae27f552a975cb39cc42b60
+9bdc373bcca774ee57b8c42f4af61a7b50f3dc26
+82d5d10089d6ac311a41548502b7433016c46fc8
+a424c038ba0c0d65e579e22001dec925902ac0ef
+592872f4235c7f2a3280725278da55544032f72d
+1645efbd392989cf015f459a91c999e59c921b15
+05d7e0e13f43e12db6a51726df12c8b4d8040676
+e2ba12d5d60715d95105e3e790fc234cfb59893d
+113e89fb08b1b6b072d60b3e4737ed407c13db9a
+77040d85e3eb6710508e6445640ae1a3d5e60c22
+d1c67a0396e84c08d0558fbb843b5bd1f26e1921
+5c8642aeae9c756b438ab7637c90ef3c77966e6e
+840eae2ca81c597a0010b2126f32dce17d384b70
+f6d9c664f6d481703138319f6a0f1fdbddb3a259
+6cc9f1a1af323cd156f5668a47e43bab324ae16f
+3d97153944f7de9c19c1b3637b33d3cf1fbbe4d7
+e701bd852ca9a22e04743104987f11ae575a6fe2
+7dbf51bf78d157098074a20bd9da39bd48c18e4a
+41b8bdb5ccc1d8edb71acf1c8234da235a24249d
+33d96c13fe18a2dad01b19ce195548c9acea9da4
+3e8fa3beea49ea62109df9e643c9cb678dabdde1
+567194c53ae91f0a14dc27239afb739b1c10448a
+1ca0388c2fb37ac6a06f1c188ae89c41e3e15e84
+12e23c962ffb4cf1857c5461d72ae54cc8008f29
+3ded28aece694d0df39c9f0fa1ff385b14a8656b
+4929735be6bdae0d1853d7d269234a30be18408f
+261ea429eafedfaf7c784ad96196c3e11c0c928e
+2d2f0c736179652ae399360b75f7b523acf46c80
+612f971b78c60202e9cd75a299050c8f2d724a59
 
 
 
 The Cloudera, Inc. modified jar files above are provided under the Apache License, Version 2.0.
 -------------------------
-Items appearing in the following notices.txt are provided for the notification and guidance of the recipient in accordance with the listed license.  In an abundance of caution, the listing may include various dependencies applicable only to development, testing, and evaluation, which may not be included in the distribution and, indeed, may have been deprecated in favor of alternatives.  Accordingly, this listing should not be construed as an admission that the listed component appears in the distribution or in the manner indicated.  Similarly, fulfilling a license’s compliance requirements for a particular form of distribution is not an admission that the software is in fact distributed in that form.  Distributions and packaging vary and not all third party components are relied upon in the same manner or degree.  In addition, some compliance documentation, such as embedded notices files in source code, may be found within the distribution itself rather than below.
+Items appearing in the following notices.txt are provided for the notification and guidance of the recipient in accordance with the listed license.  In an abundance of caution, the listing may include various dependencies applicable only to development, testing, and evaluation, which may not be included in the distribution and, indeed, may have been deprecated in favor of alternatives.  Accordingly, this listing should not be construed as an admission that the listed component appears in the distribution or in the manner indicated.  Similarly, fulfilling a licenseï¿½s compliance requirements for a particular form of distribution is not an admission that the software is in fact distributed in that form.  Distributions and packaging vary and not all third party components are relied upon in the same manner or degree.  In addition, some compliance documentation, such as embedded notices files in source code, may be found within the distribution itself rather than below.
 
 
 
@@ -45,9 +91,15 @@ Copyright (C) 2008 - 2018 Jackson Json-processor Project and authors/contributor
 Dual licensed under the Apache License, Version 2.0 and the GNU Lesser General Public License, Version 2.1. Cloudera, Inc. has elected to received Jackson0databin under the Apache License, Version 2.0, which appears below.
 
 
-LICENSES ==================================================================================
 
-Apache License
+
+
+
+LICENSES ==================================================================================
+
+
+
+Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/
 TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
@@ -106,14 +158,14 @@ END OF APACHE LICENSE VERSION 2.0
 CLOUDERA SUPPLEMENTAL DISCLAIMER TO APACHE LICENSE, VERSION 2
 
 
-Cloudera, Inc.’s Apache License, Version 2 –Supplemental Disclaimer
+Cloudera, Inc.ï¿½s Apache License, Version 2 ï¿½Supplemental Disclaimer
 
 
 This Supplemental Disclaimer supplements and is incorporated into the Apache License, Version 2.0, pursuant to which You have agreed to use this distribution.  Any terms used in this Supplemental Disclaimer but not defined herein shall have the meanings ascribed to them in the License.
 
-As may be evidenced, at least in part, by the third party notices document accompanying this distribution, the Work may be distributed in conjunction with software received from third parties (“Third Party Code”).   This Third Party Code is licensed to You directly from those third parties under the various applicable third party licenses.
+As may be evidenced, at least in part, by the third party notices document accompanying this distribution, the Work may be distributed in conjunction with software received from third parties (ï¿½Third Party Codeï¿½). ï¿½ï¿½This Third Party Code is licensed to You directly from those third parties under the various applicable third party licenses.
 	
-Disclaimer of Warranty.  Unless required by applicable law, Cloudera, Inc. (“Cloudera”) provides the Third Party Code, on an "as is" or “as available” basis, without any representations, warranties, covenants or conditions of any kind, either express or implied, including, without limitation, any warranties or conditions of title, non-infringement, merchantability, or fitness or suitability for a particular purpose (whether or not Cloudera knows, has reason to know, has been advised, or is otherwise aware of any such purpose).  Cloudera and its suppliers do not warrant that the Third Party Code will be free from all bugs, errors, or omissions.  You are solely responsible for determining the appropriateness of using the Third Party Code, and assume any risks associated with Your exercise of permissions under the License and the third party licenses.
+Disclaimer of Warranty.  Unless required by applicable law, Cloudera, Inc. (ï¿½Clouderaï¿½) provides the Third Party Code, on an "as is" or ï¿½as availableï¿½ basis, without any representations, warranties, covenants or conditions of any kind, either express or implied, including, without limitation, any warranties or conditions of title, non-infringement, merchantability, or fitness or suitability for a particular purpose (whether or not Cloudera knows, has reason to know, has been advised, or is otherwise aware of any such purpose).  Cloudera and its suppliers do not warrant that the Third Party Code will be free from all bugs, errors, or omissions.  You are solely responsible for determining the appropriateness of using the Third Party Code, and assume any risks associated with Your exercise of permissions under the License and the third party licenses.
 
 Limitation of liability.  In no event and under no legal theory, whether in contract, tort, strict liability or otherwise, shall Cloudera be liable to You for damages, including any direct, indirect, special, incidental, exemplary, punitive, or consequential damages of any character, arising out of or in connection with this License, the Third Party Code, or related to Your use or inability to use the Third Party Code, including but not limited to damages for loss of profits, loss of data, loss of use, loss of revenue, loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses, even if Cloudera has been advised of the possibility of such damages.
 
